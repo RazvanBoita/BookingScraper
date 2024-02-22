@@ -79,7 +79,7 @@ with open("booking_iasi.csv",'w',newline='',encoding='utf-8') as file:
     csvwriter = csv.writer(file)
     csvwriter.writerow(['Nume Hotel', 'Pret','Rating','Nr Evaluari']) 
     # results//25+1
-    for i in range(0, 1):
+    for i in range(0, results//25+1):
         offset_val = i * 25
         curr_url = base_url.format(checkin, checkout, offset_val)
         driver.get(curr_url)
